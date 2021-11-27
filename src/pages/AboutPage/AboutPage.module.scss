@@ -1,0 +1,26 @@
+$fonts-color: #3d3d3d;
+
+.container {
+  font-family: "Rubik", sans-serif;
+  width: 1336px;
+  height: 660px;
+  margin: 0 auto;
+
+  h1 {
+    margin: 75px 0 75px 0;
+    width: 519px;
+    height: 41px;
+    color: $fonts-color;
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: -0.68px;
+  }
+
+  section {
+    color: $fonts-color;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+    line-height: 36px;
+  }
+}

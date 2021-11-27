@@ -1,0 +1,81 @@
+$fonts-color: #3d3d3d;
+$header-color: #ffffff;
+$color-pseudo-element: #fdd000;
+
+.container {
+  font-family: "Rubik", sans-serif;
+  width: 1920px;
+  height: 171px;
+  background-color: $header-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.containerForLinks {
+  display: flex;
+  flex-direction: row;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+.svg {
+  width: 246px;
+  height: 46px;
+  margin-left: 110px;
+}
+
+.fonts {
+  font-size: 28px;
+  color: $fonts-color;
+  letter-spacing: 0.56px;
+  line-height: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+
+  &:last-child {
+    margin-right: 110px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 70px;
+  }
+}
+
+.isActive {
+  font-size: 28px;
+  color: $fonts-color;
+  letter-spacing: 0.56px;
+  line-height: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+
+  &:last-child {
+    margin-right: 110px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 70px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 38px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 14px;
+    height: 14px;
+    background-color: $color-pseudo-element;
+    margin: 0 auto;
+    display: block;
+    -webkit-border-radius: 100px 100px 100px 100px;
+    -moz-border-radius: 100px 100px 100px 100px;
+    border-radius: 100px 100px 100px 100px;
+  }
+}

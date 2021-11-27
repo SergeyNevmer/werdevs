@@ -1,0 +1,83 @@
+$font-color-and-pseudo-element: #dfdfdf;
+$hover-color: #fdd000;
+$hover-font-color: #3d3d3d;
+
+.container {
+  width: 468px;
+  height: 490px;
+  font-family: "Rubik", sans-serif;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+    button {
+      width: 20px;
+      height: 20px;
+      color: $font-color-and-pseudo-element;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+}
+
+.line {
+  width: 468px;
+  height: 1px;
+  background-color: $font-color-and-pseudo-element;
+}
+
+.containerForYearAndMonth {
+  width: 166px;
+  height: 20px;
+  font-size: 19px;
+  line-height: 23px;
+  color: $font-color-and-pseudo-element;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
+
+.wrapper {
+  padding-top: 50px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  p {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px 10px 10px;
+    color: $font-color-and-pseudo-element;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    position: relative;
+
+    &:hover {
+      color: $hover-font-color;
+      background-color: $hover-color;
+    }
+  }
+}
+
+.pseudoElement::after {
+  content: "";
+  position: absolute;
+  top: 45px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 5px;
+  height: 5px;
+  background-color: $hover-color;
+  margin: 0 auto;
+  display: block;
+  -webkit-border-radius: 100px 100px 100px 100px;
+  -moz-border-radius: 100px 100px 100px 100px;
+  border-radius: 100px 100px 100px 100px;
+}
